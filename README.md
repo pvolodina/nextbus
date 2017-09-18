@@ -21,7 +21,7 @@ The program checks the possible directions allowed for that route, and then asks
 Bus Route Selected:  METRO Blue Line
 Are you traveling NORTHBOUND or SOUTHBOUND today? 
 ```
-You can input the direction you want in multiple variations of north/south/east/west. For the above example, if you want to travel northbound, you can input it as any choice of {"NORTHBOUND", "NORTH", "Northbound", "North", "north", "N", "n"}.
+You can input the direction in multiple variations of north/south/east/west. For example, if you want to travel northbound, you can input it as any choice of {"NORTHBOUND", "NORTH", "Northbound", "North", "north", "N", "n"}, and likewise for any other direction.
 
 After your desired direction is accepted, the program asks which bus stop along that route you are looking to depart from:
 ```
