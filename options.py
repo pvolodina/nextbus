@@ -12,12 +12,13 @@ headers = {'Content-Type': 'application/json', 'Accept': 'application/json'}
 # or if the route isn't a METRO route then the user can just input the route number
 
 def show_routes():
+	print('\nBus Routes Available:')
 	api_url = '{}NexTrip/Routes?format=json'.format(api_url_base)
 	resp = requests.get(url=api_url)
 	data = json.loads(resp.text)
 	for i in range(len(data)):
-		print('		' + data[i]['Description'])
-	bus_route = input('Please provide the full bus route name: ')
+		print('   ' + data[i]['Description'])
+	bus_route = input('\nPlease provide the full bus route name or the route number: ')
 	return bus_route
 
 
@@ -38,6 +39,7 @@ def show_directions(route):
 # 4-character stop identifier is known, that also works as input
 
 def show_stops(bus_route, direction):
+	print('\nBus Stops Available:')
 	api_url = '{}NexTrip/Stops/{}/{}?format=json'.format(api_url_base, bus_route, direction)
 	resp = requests.get(url=api_url)
 	data = json.loads(resp.text)
@@ -45,8 +47,8 @@ def show_stops(bus_route, direction):
 		print('There are no buses running on this route today :(')
 		exit()
 	for i in range(len(data)):
-		print('		' + data[i]['Text'])
-	bus_stop = input('Please provide the full bus stop name: ')
+		print('   ' + data[i]['Text'])
+	bus_stop = input('\nPlease provide the full bus stop name: ')
 	return bus_stop
 
 
