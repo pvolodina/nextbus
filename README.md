@@ -8,7 +8,7 @@ $ python nextbus.py
 ```
 The script will wait for input from the user at every step of determining the exact bus that is leaving soonest from the desired bus stop.
 
-The first input will ask for is the name of the bus route on which the bus stop is located:
+The first input will ask for the name of the bus route on which the bus stop you are looking for is located:
 ```
 Which bus route do you want to use?
 (Enter "options" or "o" to see options) 
