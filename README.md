@@ -13,7 +13,7 @@ The first input will ask for the name of the bus route on which the bus stop you
 Which bus route do you want to use?
 (Enter "options" or "o" to see options) 
 ```
-Most of the bus routes have a route number associated with them, and if you select to bring up the options, that number is found to the left of the name of the route. You can input either the full name or just the route number. If you decide to enter the full route name, it must be entered exactly how it is named (including that route number) and is case-sensitive.
+Most of the bus routes have a route number associated with them, and if you select to bring up the options, that number is found to the left of the name of the route. You can input either the full name or just the route number. If you decide to enter the full route name, it must be entered exactly how it is named (including that route number, if the list includes one) and is case-sensitive.
 
 After selecting the bus route, you are asked for the desired direction that you want to travel along the route you chose. 
 The program checks the possible directions allowed for that route, and then asks you which direction you want to choose:
