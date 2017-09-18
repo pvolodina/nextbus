@@ -14,7 +14,7 @@ if (bus_route == "options" or bus_route == "o"):
 	bus_route = options.show_routes()
 print('Bus Route Selected: ', bus_route)	# prints out what the user inputted
 bus_route = options.get_route(bus_route)
-#print('Bus Route ID: ', bus_route)
+#print('Bus Route ID: ', bus_route)			# used for debugging
 
 
 # after the route is selected, the GetDirections() operation finds
@@ -50,8 +50,8 @@ bus_stop = options.get_stop(bus_stop, bus_route, direction)
 url = '{}NexTrip/{}/{}/{}?format=json'.format(api_url_base, bus_route, direction, bus_stop)
 resp = requests.get(url=url)
 data = json.loads(resp.text)
-nextBus = data[0]['DepartureTime']
-minutes = options.parse_time(nextBus)
+dept_time = data[0]['DepartureTime']
+minutes = options.parse_time(dept_time)
 
 if (int(minutes) == 1):
 	print('The next bus leaves in ' + minutes + ' minute')
