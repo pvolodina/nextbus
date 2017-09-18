@@ -9,7 +9,7 @@ headers = {'Content-Type': 'application/json', 'Accept': 'application/json'}
 
 # user enters the name or stop number of the route they want to use
 
-bus_route = input('Which bus route do you want to use?\n(Enter "options" to see options) ')
+bus_route = input('Which bus route do you want to use?\n(Enter "options" or "o" to see options) ')
 if (bus_route == "options" or bus_route == "o"):
 	bus_route = options.show_routes()
 print('Bus Route Selected: ', bus_route)	# prints out what the user inputted
@@ -32,7 +32,7 @@ direction = options.get_direction(bus_route, direction)
 # this would prevent a user choosing a bus stop that doesn't exist
 # on their previously selected route
 
-bus_stop = input('Which bus stop will you be leaving from?\n(Enter "options" to see options) ')
+bus_stop = input('Which bus stop will you be leaving from?\n(Enter "options" or "o" to see options) ')
 if (bus_stop == "options" or bus_stop == "o"):
 	bus_stop = options.show_stops(bus_route, direction)
 print('Bus Stop Selected: ', bus_stop)
